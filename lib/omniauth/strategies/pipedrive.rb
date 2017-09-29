@@ -12,6 +12,8 @@ module OmniAuth
       def request_phase
         super
       end
+
+      uid { raw_info['id'].to_s }
     end
   end
 end
