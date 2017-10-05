@@ -14,6 +14,23 @@ module OmniAuth
       end
 
       uid { raw_info['id'].to_s }
+
+      info do
+        {
+          name: raw_info['name'],
+          email: raw_info['email']
+        }
+      end
+
+      extra do
+        {
+          'raw_info' => raw_info
+        }
+      end
+
+      def raw_info
+        @raw_info ||= access_token.get('/users').parsed
+      end
     end
   end
 end
