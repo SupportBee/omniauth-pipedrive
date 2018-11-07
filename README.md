@@ -1,20 +1,28 @@
 # omniauth-pipedrive
 
-This is the OmniAuth strategy for authenticating to [Pipedrive](https://www.pipedrive.com). To use it, you'll need to create an Application and copy the Client ID and Client Secret. Get in touch with [Pipedrive](https://www.pipedrive.com) to get early access to their Marketplace.
+This is the OmniAuth strategy for authenticating to [Pipedrive](https://www.pipedrive.com)
 
 ## Installation
 
-```ruby
-gem 'omniauth-pipedrive', git: "https://github.com/SupportBee/omniauth-pipedrive"
-```
+1. Obtain a Sandbox account from Pipedrive https://pipedrive.readme.io/docs/marketplace-creating-a-proper-app
 
-## Basic Usage
+2. Sign into to your Pipedrive Sandbox account and create an Application. Provide a URL like https://mywebsite.com/auth/pipedrive/callback as the callback. Copy the Client ID and Client Secret after creating the Application
 
-```ruby
-use OmniAuth::Builder do
-  provider :pipedrive, ENV['client_id'], ENV['client_secret']
-end
-```
+3. Add `omniauth-pipedrive` to your Gemfile
+
+   ```
+   gem 'omniauth-pipedrive', git: "https://github.com/SupportBee/omniauth-pipedrive"
+   ```
+
+4. Provide your Client ID and Client Secret to your gem in an initializer
+
+   ```ruby
+   # In config/initializers/omniauth.rb
+   
+   use OmniAuth::Builder do
+     provider :pipedrive, ENV['client_id'], ENV['client_secret']
+   end
+   ```
 
 ## Credits
 
