@@ -1,6 +1,6 @@
 # omniauth-pipedrive
 
-This is the OmniAuth strategy for authenticating to [Pipedrive](https://www.pipedrive.com). To use it, you'll need to create an Application and copy the Client ID and Client Secret. Get in touch with [Pipedrive](https://www.pipedrive.com) to get earlya access to their Marketplace.
+This is the OmniAuth strategy for authenticating to [Pipedrive](https://www.pipedrive.com). To use it, you'll need to create an Application and copy the Client ID and Client Secret. Get in touch with [Pipedrive](https://www.pipedrive.com) to get early access to their Marketplace.
 
 ## Installation
 
